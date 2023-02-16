@@ -1,7 +1,12 @@
-# include<stdio.h>
-main()
+#include <stdio.h>
+
+/**
+ *  * main - prints the phrase with proper grammar,
+ *   * but the outcome is a piece of art,
+ *    * Return: 0 if exited properly, non-zero otherwise
+ *     */
+int main(void)
 {
-	int x=1,y=2,z=3;
-	printf("Value of \"%d-%d+%d\" is %d\n", x,y,z,x-y+z);
-	printf("Value of \"%d+%d-%d\" is %d\n", x,y,z,x+y-z);
+		printf("with proper grammar, but the outcome is a piece of art,\n");
+			return (0);
 }
