@@ -1,28 +1,33 @@
 #include <stdio.h>
+
 /**
- * main - prints numbers in ascending order
- * Return: 0 if exited properly, non zero otherwise
+ * main - prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int ch;
-int n;
-for (ch = 48; ch <= 57; ch++)
-{
-	for (n = 49; n <= 57; n++)
+	int i, j;
+
+	for (i = 0; i < 100; i++)
 	{
-		if (n > ch)
+		for (j = 0; j < 100; j++)
 		{
-			putchar(ch);
-			putchar(n);
-			if (ch != 56 || n != 57)
+			if (i < j)
 			{
-				putchar(44);
-				putchar(32);
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
+
 		}
 	}
-}
-putchar(10);
-return (0);
+	putchar('\n');
+	return (0);
 }
